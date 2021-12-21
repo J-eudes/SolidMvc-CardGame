@@ -1,9 +1,9 @@
-package com.openclassroom.cardgame.controller;
+package com.openclassrooms.cardgame.controller;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.openclassroom.cardgame.view.View;
+import com.openclassrooms.cardgame.view.View;
 import com.openclassrooms.cardgame.model.Deck;
 import com.openclassrooms.cardgame.model.Player;
 import com.openclassrooms.cardgame.model.PlayingCard;
