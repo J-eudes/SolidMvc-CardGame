@@ -7,8 +7,6 @@ import com.openclassroom.cardgame.view.View;
 import com.openclassrooms.cardgame.model.Deck;
 import com.openclassrooms.cardgame.model.Player;
 import com.openclassrooms.cardgame.model.PlayingCard;
-import com.openclassrooms.cardgame.model.Rank;
-
 
 public class GameController {
 
@@ -46,7 +44,6 @@ public class GameController {
         }
     }
 
-
     public void addPlayer(String playerName) {
         if (gameState == GameState.AddingPlayers) {
             players.add(new Player(playerName));
@@ -72,7 +69,8 @@ public class GameController {
         for (Player player : players) {
             PlayingCard pc = player.getCard(0);
             pc.flip();
-            view.showCardForPlayer(playerIndex++, player.getName(), pc.getRank(),toString(), pc.getSuit().toString());
+            view.showCardForPlayer(playerIndex++, player.getName(),
+                    pc.getRank().toString(), pc.getSuit().toString());
         }
 
         evaluateWinner();
